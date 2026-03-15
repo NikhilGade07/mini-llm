@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini LMS - Welcome</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+</head>
+
+<body>
+    <div class="landing-container">
+        <header class="landing-header">
+            <div class="logo">Mini <span class="accent">LMS</span></div>
+            <nav>
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="register.html" class="btn btn-primary">Sign Up</a>
+            </nav>
+        </header>
+
+        <main class="landing-hero">
+            <div class="hero-content">
+                <h1>Manage Your Courses & Assignments <br> <span class="accent">Effortlessly</span></h1>
+                <p>A modern platform for teachers and students to collaborate, manage deadlines, and track progress
+                    seamlessly.</p>
+                <div class="hero-actions">
+                    <a href="register.html" class="btn btn-primary btn-large">Get Started Now</a>
+                    <a href="login.html" class="btn btn-outline btn-large">Teacher Login</a>
+                </div>
+            </div>
+            <div class="hero-illustration">
+                <!-- Abstract geometric shapes for modern hero -->
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script>
+        // Redirect to dashboard if already logged in
+        if (localStorage.getItem('token')) {
+            window.location.href = 'dashboard.html';
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini LMS - Dashboard</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/dashboard.css">
+</head>
+
+<body>
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar glass-panel">
+            <div class="sidebar-header">
+                <div class="logo">Mini <span class="accent">LMS</span></div>
+            </div>
+
+            <div class="user-profile-sm">
+                <div class="avatar">
+                    <span class="user-name-display"
+                        style="font-size: 1.5rem; font-weight: bold; text-align: center; display:block; padding-top:10px;"></span>
+                </div>
+                <div class="info">
+                    <div class="name user-name-display">User Name</div>
+                    <div class="role badge badge-primary user-role-display">Role</div>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <ul id="navLinks">
+                    <li><a href="#" class="active" data-view="overview">Dashboard Overview</a></li>
+                    <li><a href="#" data-view="courses">My Courses</a></li>
+                    <li id="navAssignments"><a href="#" data-view="assignments">Assignments</a></li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="theme-switch-wrapper">
+                    <label class="theme-switch" for="themeToggle">
+                        <input type="checkbox" id="themeToggle" />
+                        <div class="slider round">
+                            <span class="icon-sun">☀️</span>
+                            <span class="icon-moon">🌙</span>
+                        </div>
+                    </label>
+                </div>
+                <button id="logoutBtn" class="btn btn-outline btn-full" style="margin-top: 1rem;">Logout</button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="topbar glass-panel">
+                <h2 id="pageTitle">Dashboard Overview</h2>
+                <div class="topbar-actions">
+                    <!-- Context specific actions injected here via JS -->
+                    <div id="topbarActions"></div>
+                </div>
+            </header>
+
+            <div class="content-area" id="mainContent">
+                <!-- Content injected dynamically via JS -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Modals Container -->
+    <div id="modalContainer"></div>
+
+    <script src="js/api.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+
+</html>
